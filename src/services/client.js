@@ -13,6 +13,5 @@ export function checkError({ data, error }) {
 
 export async function getBlogs() {
   const response = await client.from('blogs').select('*');
-  console.log(response.data);
   return checkError(response);
 }
