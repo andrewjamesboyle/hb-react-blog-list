@@ -10,3 +10,9 @@ export function checkError({ data, error }) {
   }
   return data;
 }
+
+export default async function(getBlogs) {
+  const response = await client.from('blogs').select('*');
+  console.log(response.data);
+  return checkError(response);
+}
